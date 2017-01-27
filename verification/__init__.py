@@ -4,7 +4,6 @@
 
 from .aig import AIG, Signal, Input, Output, Latch, And
 
-from .ltl import LTL, LTLAst, LTLProposition, LTLUnaryOperator, LTLBinaryOperator
-from .ltl import symbol, parse, is_boolean, extract_invariant, true, false, equiv
+from .ltl import LTL, LTLAst, LTLProposition, LTLUnaryOperator, LTLBinaryOperator, parse
 
 from .sat import Solver

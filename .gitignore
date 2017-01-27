@@ -1,0 +1,6 @@
+.idea
+*.so
+*.tar.gz
+build
+picosat
+__pycache__

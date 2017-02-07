@@ -5,6 +5,10 @@
 
 def _literal(string):
     literal = int(string)
+    if literal == 1:
+        return True
+    elif literal == 0:
+        return False
     return -(literal // 2) if literal & 1 else literal // 2
 
 
@@ -60,9 +64,9 @@ class AIG:
 
             inputs = []
             for _ in range(num_ins):
-                input_ = Input(_literal(file.readline().strip()))
-                variables[abs(input_.literal)] = input_
-                inputs.append(input_)
+                input = Input(_literal(file.readline().strip()))
+                variables[abs(input.literal)] = input
+                inputs.append(input)
 
             latches = []
             for _ in range(num_latches):
